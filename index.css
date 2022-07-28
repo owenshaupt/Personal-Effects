@@ -1,0 +1,67 @@
+body  {
+	height: 100vh;
+	font-family: 'paralucent', sans-serif;
+	font-weight: 500;
+	font-size: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: flex-start;
+}
+
+.header {
+	width: 100vw;
+	font-family: 'paralucent', sans-serif;
+	font-weight: 900;
+	font-size: 3em;
+	font-style: italic;
+}
+
+.main-container {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.links-header {
+	margin-bottom: 1em;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	margin-bottom: 1em;
+}
+
+.links *:hover {
+	transform: translateX(25px);
+}
+
+.links * {
+	width: 100%;
+	transition: transform 1s ease;
+	margin-bottom: 0.5em;
+}
+
+.links *:last-child {
+	margin: 0;
+}
+
+/* Smaller than iPad */
+@media (max-width: 767px) { 
+	body {
+		font-size: 1.5em;
+	}
+}
+
+/*  */
+@media (max-width: 767px) { 
+	.footer {
+		font-size: .9em;
+	}
+}
