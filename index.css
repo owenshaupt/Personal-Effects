@@ -21,16 +21,35 @@ body  {
 	width: 100vw;
 	height: 100%;
 	display: flex;
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	align-items: center;
+}
+
+.avatar-container {
+	height: 350px;
+	width: 45%;
+}
+
+.avatar-container > img {
+	float: right;
+}
+
+.links-section {
+	width: 55%;
+	height: 100%;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	padding-left: 2em;
 }
 
 .links-header {
 	margin-bottom: 1em;
 }
 
-.links {
+.links-collection {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -38,18 +57,30 @@ body  {
 	margin-bottom: 1em;
 }
 
-.links *:hover {
+.links-collection *:hover {
 	transform: translateX(25px);
 }
 
-.links * {
+.links-collection * {
 	width: 100%;
 	transition: transform 1s ease;
 	margin-bottom: 0.5em;
 }
 
-.links *:last-child {
+.links-collection *:last-child {
 	margin: 0;
+}
+
+@media (max-width: 1099px) { 
+	.avatar-container {
+		height: 200px;
+		width: 35%;
+	}
+
+	.links-section {
+		padding-left: 1em;
+		font-size: .9em;
+	}
 }
 
 /* Smaller than iPad */
@@ -59,9 +90,21 @@ body  {
 	}
 }
 
-/*  */
+/* Phone size */
 @media (max-width: 767px) { 
 	.footer {
 		font-size: .9em;
+	}
+
+	.links-section {
+		width: 100%;
+	}
+
+	.avatar-container {
+		display: none;
+	}
+
+	.avatar-container > img {
+		opacity: .3;
 	}
 }
